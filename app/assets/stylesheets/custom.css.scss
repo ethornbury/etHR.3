@@ -1,0 +1,45 @@
+/* debug box  */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+ 
+}
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #a3a3a3;
+  color: #777;
+  a {
+    color: #555;
+    &:hover {
+      color: #c4c4c4;
+    }
+  }
+  /*
+  small {
+    float: left;
+  }
+  */
+  
+  
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+  
+}
+
+.myRegLink{
+  color:red;
+  font-style:italic;
+  
+}
