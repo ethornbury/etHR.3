@@ -11,8 +11,7 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
    has_secure_password  #facilitates a securely saved password with pword confirmation, and authenticates user
    # the above needs password digest
-   validates :password, length: { minimum: 6 }
-   
+   validates :password, length: { minimum: 6 }, allow_blank: true   #allows blank on profile update. The line above secures the sign up process.
    # Returns the hash digest of the given string.
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -24,6 +23,22 @@ class User < ActiveRecord::Base
   def User.new_token
     SecureRandom.urlsafe_base64
   end
+  
+  ###
+#  class << self
+#    # Returns the hash digest of the given string.
+#    def digest(string)
+#      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+#                                                    BCrypt::Engine.cost
+#      BCrypt::Password.create(string, cost: cost)
+#    end
+
+#    # Returns a random token.
+#    def new_token
+#      SecureRandom.urlsafe_base64
+#    end
+#  end
+  ###
   
    # Remembers a user in the database for use in persistent sessions.
   def remember
