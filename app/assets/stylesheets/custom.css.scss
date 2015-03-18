@@ -74,9 +74,7 @@ textarea {
   margin-bottom: 10px;
 }
 /* header */
-.navbar-default .navbar-brand {
-    color: red;
-}
+
 /*
 #logo {
   float: left;
@@ -107,7 +105,7 @@ input {
   height: auto !important;
 }
 #error_explanation {
-  color: red;
+ /* color: red;*/
   ul {
     color: red;
     margin: 0 0 30px 0;
@@ -117,6 +115,19 @@ input {
 .field_with_errors {
   @extend .has-error;
   .form-control {
-    color: red;
+    /*color: red;*/
   }
+}
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
