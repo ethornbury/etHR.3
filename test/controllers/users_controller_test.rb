@@ -4,13 +4,18 @@ class UsersControllerTest < ActionController::TestCase
 
   def setup
     @user = users(:emer)
-     @other_user = users(:archer)
+    @other_user = users(:archer)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
+  test "should redirect index when not logged in" do
+    get :index
+    assert_redirected_to signin_url
   end
+
+  #test "should get new" do
+  #  get :new
+  #  assert_response :success
+  #end
 
   test "should redirect edit when not logged in" do
     get :edit, id: @user
