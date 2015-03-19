@@ -32,9 +32,12 @@ gem 'bcrypt', '~> 3.1.7'
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# to create sample users
+# to create sample users. look in db/seeds.rb
 gem 'faker',                '1.4.2'
 
+# to create a listing in pages rather than endless scrolling
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
