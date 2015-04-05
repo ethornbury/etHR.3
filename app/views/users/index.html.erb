@@ -5,7 +5,8 @@
 <%= will_paginate %>
 
 <ul class="users">
-  <%= render @users %>
+   <%= render @users.order(:name) %>
+  <%#= render @users %>
   <!-- line above acheives the same as the 3 below -->
   <%# @users.each do |user| %>
     <%#= render user %>

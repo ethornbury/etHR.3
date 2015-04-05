@@ -49,9 +49,24 @@ footer {
 /* universal */
 
 .myRegLink{
-  color:red;
-  font-style:italic;
-  
+ color: #7d1092;
+ font-weight: bold;
+ font-style:italic;
+}
+
+.myA{
+  color: #7d1092;
+}
+
+.btn-custom{
+  background-color: #7d1092;
+  color: #fff;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active{
+   color: #c4c4c4; 
+  }
 }
 
 body {
